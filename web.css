@@ -1,0 +1,195 @@
+html {
+    min-height: 100%;
+    background-color: #b8d4e8;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    position: relative;
+    z-index: 0;
+}
+
+.germany-bg {
+    position: fixed;
+    top: -8vh;
+    left: -8vw;
+    width: 116vw;
+    height: 116vh;
+    z-index: -2;
+    background-image: url("Fotolar/Germany.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: germanyBackground 22s ease-in-out infinite alternate;
+    will-change: transform;
+    pointer-events: none;
+}
+
+.germany-bg-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.7) 0%,
+        rgba(255, 255, 255, 0.5) 50%,
+        rgba(255, 255, 255, 0.65) 100%
+    );
+}
+
+@keyframes germanyBackground {
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+    50% {
+        transform: scale(1.08) translate(-1.5%, -1%);
+    }
+    100% {
+        transform: scale(1.14) translate(1.5%, 0.5%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .germany-bg {
+        animation: none;
+    }
+}
+
+h1 {
+    color: #c62e2e;
+    font-size: 2.5em;
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: #c62e2e;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #c62e2e;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.schrifteigenschaften { 
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}   
+
+.hintergrundfarbe {
+    background-color: #eceac6e7;
+    padding: 20px;
+    border-radius: 5px;
+}  
+
+.hintergrundfarbe2 {
+    background-color: rgb(180, 130, 130);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.div-stil {
+    background-color: #f0f0f0;
+    width: 50px;
+    height: 50px;
+
+}
+.div-stil2 {
+    background-color: #a20c0c;
+    width: 100px;
+    height: 100px;
+}
+
+#paragraph1 {     /* Her yerde kullanma bunu ve genellikle bir paragrafı ayrı belli tutmak için hemen çağırmak için kullanılır. */
+    font-size: 1.2em;
+    margin-bottom: 25px;
+}
+
+ul {
+    list-style-type: none; /* Bu şekilde liste başındaki noktaları kaldırırız. */
+    padding: 0; /* Liste elemanlarının etrafındaki boşluğu kaldırır. */
+    background-color: rgba(255, 255, 255, 0.92);
+    width: 100%; /* Liste genişliğini tam olarak kapsar. */
+    
+}
+
+ul li {
+    display: inline; /* Liste elemanlarını yatay olarak sıralar. */
+    margin-right: 15px; /* Liste elemanları arasına boşluk ekler. */
+    margin-left: 0cm; /* İlk liste elemanının sol tarafında boşluk olmaz. */
+    padding: 8px; /* Liste elemanlarına biraz iç boşluk ekler. */
+    font-weight: bold; /* Liste elemanlarının metnini kalın yapar. */
+}
+
+ul li :hover {
+    background-color: #dabe43; /* Fare üzerine gelindiğinde arka plan rengini değiştirir. */
+    color: white; /* Fare üzerine gelindiğinde metin rengini beyaz yapar. */
+    border-radius: 5px; /* Fare üzerine gelindiğinde köşeleri yuvarlatır. */
+    transition: 0,5s;
+}
+
+ul li a {
+    text-decoration: none; /* Bağlantıların altını kaldırır. */
+    color: #c62e2e; /* Bağlantı metninin rengini belirler. */
+    font-weight: bold; /* Bağlantı metnini kalın yapar. */
+}
+
+ul li:nth-child(1) {
+    margin-left: 0; /* İlk liste elemanının sol tarafında boşluk olmaz. */
+    background-color: rgba(128, 214, 240, 0.85);
+}
+
+.menu-button {
+    display: none;
+}
+
+button {
+    margin-right: 8px;
+    margin-bottom: 12px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #c62e2e;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #a02020;
+}
+
+img {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 700px) {
+    .menu-button {
+        display: inline-block;
+    }
+
+    .main-menu {
+        display: none;
+    }
+
+    .main-menu.is-open {
+        display: block;
+    }
+
+    .main-menu li {
+        display: block;
+        margin-right: 0;
+    }
+}
+/* DİV aslında bir bölümdür */
